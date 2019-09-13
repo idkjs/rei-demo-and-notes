@@ -4,6 +4,8 @@
 
 Note: globally installed `bs-platform` is 6.0 so that is what got installed in the project.
 
+`.rei` files generated with script at [`./rei.gen.sh`](./rei.gen.sh)
+
 ## editor-screenshot
 
 ![editor-screenshot](./Screenshot-editor.png)
