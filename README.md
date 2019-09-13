@@ -1,4 +1,4 @@
-# rei-tester
+# rei-demo-and-notes
 
 ## Trust the compiler, not the editor
 
