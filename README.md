@@ -6,6 +6,28 @@ Note: globally installed `bs-platform` is 6.0 so that is what got installed in t
 
 `.rei` files generated with script at [`./rei.gen.sh`](./rei.gen.sh)
 
+Original script out put for `Component1.re` is in [`rei/`](./rei) with all the others.
+
+```reason
+type state = { count: int, show: bool, };
+type action = Click | Toggle;
+[@bs...] external makeProps:// this throws an error.
+  (~greeting: 'greeting, ~key: string=?, unit) => {. "greeting": 'greeting}
+  = "";
+let make: {. "greeting": string} => ReasonReact.reactElement;
+```
+
+Fix the error by changing it to:
+
+```reason
+let handleClick: 'a => unit;
+[@bs.obj] external makeProps:
+  (~message: 'message, ~key: string=?, unit) => {. "message": 'message} = "";
+let make: {. "message": string} => ReasonReact.reactElement;
+```
+
+At this point in time, `VsCode` shows red, but compiler is green and the project runs.
+
 ## editor-screenshot
 
 ![editor-screenshot](./Screenshot-editor.png)
