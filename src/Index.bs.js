@@ -3,6 +3,7 @@
 
 var React = require("react");
 var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
+var App$ReactHooksTemplate = require("./App.bs.js");
 var Component1$ReactHooksTemplate = require("./Component1.bs.js");
 var Component2$ReactHooksTemplate = require("./Component2.bs.js");
 
@@ -13,5 +14,7 @@ ReactDOMRe.renderToElementWithId(React.createElement(Component1$ReactHooksTempla
 ReactDOMRe.renderToElementWithId(React.createElement(Component2$ReactHooksTemplate.make, {
           greeting: "Hello!"
         }), "index2");
+
+ReactDOMRe.renderToElementWithId(React.createElement(App$ReactHooksTemplate.make, { }), "index3");
 
 /*  Not a pure module */
